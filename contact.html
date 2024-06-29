@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eric Kutto's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+<section class="sub-header4">
+    <nav>
+        <a href="index.html"><img src="images4web/Infotech.jpeg"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i> 
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="skills.html">SKILLS</a></li>
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="projects.html">PROJECTS & CERTIFICATES</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <h1>CONTACT</h1>
+</section>
+
+<!---- CONTACT ---->
+
+
+
+    <script>
+        $(document).ready(function() {
+            $(".submit").click(function(event) {
+                event.preventDefault();
+
+                var name = $(".name").val();
+                var email = $(".email").val();
+                var phoneNumber = $(".phone-no").val();
+                var description = $("#description").val();
+
+                var nameReg = /^[a-zA-Z ]{2,30}$/;
+                var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+                var phoneReg = /^[0-9]{10,15}$/;
+
+                if(!nameReg.test(name)) {
+                    alert("Please enter a valid name.");
+                    return;
+                }
+
+                if(!emailReg.test(email)) {
+                    alert("Please enter a valid email address.");
+                    return;
+                }
+
+                if(!phoneReg.test(phoneNumber)) {
+                    alert("Please enter a valid phone number.");
+                    return;
+                }
+
+                if(description.length < 20) {
+                    alert("Please provide a more detailed description.");
+                    return;
+                }
+
+                $("form").submit();
+            });
+        });
+    </script>
+</body>
+</html>
+    
+<center>
+    <form action="action.py" class="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" class="name" name="name" placeholder="Enter your name"><br><br>
+        <label for="email">Email:</label>
+        <input type="email" class="email" name="email" placeholder="Enter a valid email address"><br><br>
+        <label for="phone-no">Phone Number:</label>
+        <input type="number" class="phone-no" name="phone-no" placeholder="Enter your phone number"><br><br>
+        <p>What service do you need?</p>
+        <select id="dropdown" name="service">
+            <option value="custom-web-dev">Custom Web Development</option>
+            <option value="responsive-web-des">Responsive Web Design</option>
+            <option value="data-analysis">Data Analysis and Visualization</option>
+        </select>
+        <label for="description">What can I do for you?</label>
+        <textarea id="description" name="description" rows="10" cols="30" placeholder="Describe what you need done"></textarea><br><br>
+        <button class="submit">Submit</button>
+    </form>
+</center>
+
+<!------ Footer ------>
+
+<section class = "footer">
+    <h5>Eric Kutto</h5>
+    <div class="socials">
+        <a href="https://twitter.com/ekkutto" class="social-link" target="_blank">
+            X
+        </a>
+        <a href="https://www.linkedin.com/in/eric-kutto-7040a3279/" class="social-link" target="_blank">
+            LinkedIn
+        </a>    
+    </div>
+</section>
+
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+<script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+</script>
+        
+
+</body>
+</html>

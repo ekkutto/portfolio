@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eric's Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+<section class="sub-header">
+    <nav>
+        <a href="index.html"><img src="images4web/Infotech.jpeg"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i> 
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="skills.html">SKILLS</a></li>
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="projects.html">PROJECTS & CERTIFICATES</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <h1>PROJECTS & CERTIFICATES</h1>
+</section>
+
+<!---- Projects & Certificates ---->
+
+<section class="projects-and-certificates">
+    <h3 class="projects-header">Projects</h3>
+    <div class="projects">
+        <div class="card" style="width: 18rem;">
+            <img src="images4web/Screenshot (23).png" class="card-img-top" alt="A screenshot of the project's homepage">
+            <div class="card-body">
+              <h5 class="card-title">CookBook</h5>
+              <p class="card-text">A static website containing cooking recipes. It was made using HTML, CSS and Bootstrap.</p>
+              <a href="https://ekkutto.github.io/recipebook/" class="btn btn-primary">Live Demo</a>
+            </div>
+        </div>
+    </div>
+    <h3 class="certificates-header">Certificates</h3>
+    <div class="certificates">
+        <div class="card" style="width: 18rem;">
+            <img src="Learning Certificates/Eric Kutto - Python.png" class="card-img-top" alt="Kaggle Python programming certificate">
+            <div class="card-body">
+              <h5 class="card-title">Python Programming</h5>
+              <p class="card-text">Kaggle Learn - Python Programming certficate.</p>
+              <a href="Learning Certificates/Eric Kutto - Python.png" class="btn btn-primary">View certificate</a>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="Learning Certificates/Eric Kutto - Pandas.png" class="card-img-top" alt="Kaggle Pandas certificate">
+            <div class="card-body">
+              <h5 class="card-title">Pandas</h5>
+              <p class="card-text">Kaggle Learn - Pandas for Data Manipulation and Handling certficate .</p>
+              <a href="Learning Certificates/Eric Kutto - Pandas.png" class="btn btn-primary">View certificate</a>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="Learning Certificates/Eric Kutto - Data Visualization.png" class="card-img-top" alt="Kaggle Data Visualization certificate">
+            <div class="card-body">
+              <h5 class="card-title">Data Visualization</h5>
+              <p class="card-text">Kaggle Learn - Data Visualization using Seaborn certficate.</p>
+              <a href="Learning Certificates/Eric Kutto - Data Visualization.png" class="btn btn-primary">View certificate</a>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="Learning Certificates/Eric Kutto - Intro to Machine Learning.png" class="card-img-top" alt="Kaggle Introduction to Machine Learning certificate">
+            <div class="card-body">
+              <h5 class="card-title">Introduction to Machine Learning</h5>
+              <p class="card-text">Kaggle Learn - Machine Learning Basics certficate.</p>
+              <a href="Learning Certificates/Eric Kutto - Intro to Machine Learning.png" class="btn btn-primary">View certificate</a>
+            </div>
+        </div>
+        <div class="card machine-learning" style="width: 18rem;">
+            <img src="Learning Certificates/Eric Kutto - Intermediate Machine Learning.png" class="card-img-top" alt="Kaggle Intermediate Machine Learning certificate">
+            <div class="card-body">
+              <h5 class="card-title">Intermediate Machine Learning</h5>
+              <p class="card-text">Kaggle Learn - Intermediate Machine Learning certficate.</p>
+              <a href="Learning Certificates/Eric Kutto - Intermediate Machine Learning.png" class="btn btn-primary">View certificate</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!------ Footer ------>
+
+<section class = "footer">
+    <h5>Eric Kutto</h5>
+    <div class="socials">
+        <a href="https://twitter.com/ekkutto" class="social-link" target="_blank">
+            X
+        </a>
+        <a href="https://www.linkedin.com/in/eric-kutto-7040a3279/" class="social-link" target="_blank">
+            LinkedIn
+        </a>
+    </div>
+</section>
+
+<script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+</script>
+
+</body>
+</html>
